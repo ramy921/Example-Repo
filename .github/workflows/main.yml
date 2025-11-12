@@ -1,1 +1,11 @@
-test
+name: main
+
+on: [push]
+
+jobs:
+  Branch_Name:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Branch Name
+        run: echo 'The name of this branch is' ${{ github.ref_name }}
